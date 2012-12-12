@@ -4,7 +4,7 @@
 """Übung 08 Numerisches Ableiten"""
 #Markus Klemm WS12/13 Phy-BA
 
-
+import matplotlib.pyplot as plt
 import numpy as np
 
 FILENAME = "Bewegung.dat"
@@ -23,5 +23,8 @@ def ZDiff(x,y):
     return (yplus1 - yminus1) / (xplus1 - xminus1)
    
 print ZDiff(f[:,0],f[:,1])
+print ZDiff(f[:,0],f[:,2])
+
+
 
     
