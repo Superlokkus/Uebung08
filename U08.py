@@ -26,12 +26,6 @@ def ZDiff(x,y):
 vx = ZDiff(f[:,0],f[:,1])
 vz = ZDiff(f[:,0],f[:,2])
 
-plt.xlabel("Zeit in s")
-plt.title("Bewegung eines Massepunkts")
-
-plt.plot(f[1:-1,0],vx, label="Geschwindigkeit in x")
-plt.plot(f[1:-1,0],vz, label="Geschwindigkeit in z")
-plt.legend()
 
 
 plt.show()
