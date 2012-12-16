@@ -29,6 +29,9 @@ vz = ZDiff(f[:,0],f[:,2])
 Ekin = np.array(0.5*m*(vx**2 + vz**2))
 Epot = np.array(m*g*f[:,2])
 
+Eges = np.array(Epot[1:-1] + Ekin)
+
+
 plt.title("Energien")
 plt.ylabel("Energie in Joule")
 plt.xlabel("Zeit in Sekunden")
@@ -36,7 +39,7 @@ plt.xlabel("Zeit in Sekunden")
 plt.plot(Ekin,label="Kinetische Energie")
 plt.plot(Epot,label="Potentielle Energie")
 
-#plt.plot(,label="Gesamtenergie")
+plt.plot(Eges,label="Gesamtenergie")
 
 
 plt.legend()
