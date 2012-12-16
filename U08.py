@@ -26,12 +26,23 @@ def ZDiff(x,y):
 vx = ZDiff(f[:,0],f[:,1])
 vz = ZDiff(f[:,0],f[:,2])
 
+Ekin = np.array(0.5*m*(vx**2 + vz**2))
+Epot = np.array(m*g*f[:,2])
+
+plt.title("Energien")
+plt.ylabel("Energie in Joule")
+plt.xlabel("Zeit in Sekunden")
+
+plt.plot(Ekin,label="Kinetische Energie")
+plt.plot(Epot,label="Potentielle Energie")
+
+#plt.plot(,label="Gesamtenergie")
 
 
+plt.legend()
 plt.show()
 
-#Ekin = 0.5*m*(vx**2 + vz**2)
-#Epot = m*g*f[:,2]
+
 
 
 
