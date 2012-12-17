@@ -27,10 +27,9 @@ vx = ZDiff(f[:,0],f[:,1])
 vz = ZDiff(f[:,0],f[:,2])
 
 fsplit = np.hsplit(f,3)
+vxg = np.gradient(np.hstack(np.delete(fsplit,2,0)))
+vzg = np.gradient(np.hstack(np.delete(fsplit,1,0)))
 
-vxg = np.gradient(np.hstack(np.delete(fsplit,2,0)),1)
-vzg = np.gradient(np.hstack(np.delete(fsplit,1,0)),1)
-print vxg
 
 Ekin = np.array(0.5*m*(vx**2 + vz**2))
 Epot = np.array(m*g*f[:,2])
