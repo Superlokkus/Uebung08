@@ -26,8 +26,8 @@ def ZDiff(x,y):
 vx = ZDiff(f[:,0],f[:,1])
 vz = ZDiff(f[:,0],f[:,2])
 
-vxg = np.gradient(f[:,1])
-vzg = np.gradient(f[:,2])
+vxg = np.gradient(f[:,1])*100
+vzg = np.gradient(f[:,2])*100
 
 Ekin = np.array(0.5*m*(vx**2 + vz**2))
 Epot = np.array(m*g*f[:,2])
