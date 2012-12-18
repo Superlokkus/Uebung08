@@ -15,17 +15,18 @@ g = 9.81 #m/s
 
 def ZDiff(x,y):
     """Übernimmt die Arrays x und y übergibt ein Array mit den Ableitungen"""
-    
+
     xplus1 = x[2:]
     xminus1 = x[:-2]
     yplus1 = y[2:]
     yminus1 = y[:-2]
-    
+
     return (yplus1 - yminus1) / (xplus1 - xminus1)
-   
+
 vx = ZDiff(f[:,0],f[:,1])
 vz = ZDiff(f[:,0],f[:,2])
 
+#! np.gradient hat dafür ein Argument (siehe Dokumentation) (-0.5)
 vxg = np.gradient(f[:,1])*100 #*100 = Ausgleich für Zeiteinteilung
 vzg = np.gradient(f[:,2])*100
 
@@ -62,8 +63,4 @@ plt.legend()
 
 plt.show()
 
-
-
-
-
-    
+#! Sehr schön! (+1.0 Stil)
